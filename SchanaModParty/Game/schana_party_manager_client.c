@@ -4,11 +4,12 @@ class SchanaPartyManagerClient {
     protected ref map<string, float> healths;
     protected ref map<string, string> allPlayers;
     protected ref map<string, string> sortingMap;
-
+    protected ref DBMPartySettings m_clientSettings;
     void SchanaPartyManagerClient () {
         SchanaPartyUtils.LogMessage ("Client Init " + SCHANA_PARTY_VERSION);
 
         positions = new ref SchanaPartyPositions ();
+        m_clientSettings = GetDBMPartySettings();
         healths = new ref map<string, float> ();
         allPlayers = new ref map<string, string> ();
         sortingMap = new ref map<string, string> ();

@@ -8,8 +8,10 @@ class SchanaPartyMarkerMenu extends UIScriptedMenu {
 
     protected string m_SchanaPartyMarkerName = "";
     protected vector m_SchanaPartyMarkerPosition = "0 0 0";
+    protected ref DBMPartySettings m_clientSettings;
 
     void SchanaPartyMarkerMenu (string name, vector position) {
+        m_clientSettings = GetDBMPartySettings();
         m_SchanaPartyMarkerRoot = GetGame ().GetWorkspace ().CreateWidgets ("SchanaModParty/GUI/Layouts/marker.layout");
         m_SchanaPartyMarkerNametag = TextWidget.Cast (m_SchanaPartyMarkerRoot.FindAnyWidget ("nametag"));
         m_SchanaPartyMarkerDistance = TextWidget.Cast (m_SchanaPartyMarkerRoot.FindAnyWidget ("distance"));
@@ -57,6 +59,12 @@ class SchanaPartyMarkerMenu extends UIScriptedMenu {
     }
 
     void SchanaPartyMarkerUpdate () {
+        if(m_clientSettings.IsTacticalPingDisabled()){
+            if(m_SchanaPartyMarkerRoot.IsVisible())
+                m_SchanaPartyMarkerRoot.Show(false);
+            return;
+        }
+
         float x, y, distance;
         vector position = m_SchanaPartyMarkerPosition;
         vector screenPosition = GetGame ().GetScreenPos (position + "0 0.2 0");
@@ -64,20 +72,29 @@ class SchanaPartyMarkerMenu extends UIScriptedMenu {
         x = Math.Round (screenPosition[0]);
         y = Math.Round (screenPosition[1]);
         m_SchanaPartyMarkerRoot.SetPos (x, y);
-
         distance = Math.Round (vector.Distance (position, GetGame ().GetPlayer ().GetPosition ()));
-        string distanceString = distance.ToString () + "m";
-        if (distance > 1000) {
-            distanceString = (Math.Round (distance / 100) / 10).ToString () + "km";
-        } else {
-            distanceString = "";
+        if(isOutOfRenderRange(distance)){
+                m_SchanaPartyMarkerRoot.Show(false);
+        }else{
+            m_SchanaPartyMarkerRoot.Show (SchanaPartyMarkerVisibleOnScreen ());
+            m_SchanaPartyMarkerNametag.SetText (m_SchanaPartyMarkerName);
         }
-        m_SchanaPartyMarkerNametag.SetText (m_SchanaPartyMarkerName);
-        m_SchanaPartyMarkerDistance.SetText (distanceString);
-
-        m_SchanaPartyMarkerRoot.Show (SchanaPartyMarkerVisibleOnScreen ());
+        CheckMarkerStyle();
     }
 
+    /* Gets triggert if player is out of render range defined in settings */ 
+    protected bool isOutOfRenderRange (float distance) {
+        if(distance >= m_clientSettings.GetMarkerRenderRange() && m_clientSettings.GetMarkerRenderRange() != -1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    void CheckMarkerStyle () {
+        m_SchanaPartyMarkerNametag.SetColor(m_clientSettings.GetHexaMarkerColor ());
+        m_SchanaPartyMarkerIcon.SetColor(m_clientSettings.GetHexaMarkerColor ());
+    }
     protected bool SchanaPartyMarkerVisibleOnScreen () {
         vector position = m_SchanaPartyMarkerPosition;
         vector screenPositionRelative = GetGame ().GetScreenPosRelative (position);

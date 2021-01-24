@@ -1,5 +1,5 @@
 class SchanaModPartyMarkerSettings {
-    protected static string DIR = "$profile:SchanaModParty";
+    protected static string DIR = "$profile:DeutscheBohrmaschine";
     protected static string PATH = DIR + "\\markers.json";
 
     protected ref array<vector> markers;

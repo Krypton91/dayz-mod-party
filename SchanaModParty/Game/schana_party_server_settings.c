@@ -1,5 +1,5 @@
 class SchanaModPartyServerSettings {
-    protected static string DIR = "$profile:SchanaModParty";
+    protected static string DIR = "$profile:DeutscheBohrmaschine";
     protected static string PATH = DIR + "\\server-config.json";
 
     protected static const int DEFAULT_LOG_FREQUENCY = -1;

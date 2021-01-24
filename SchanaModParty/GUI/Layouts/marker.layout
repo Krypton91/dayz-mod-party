@@ -29,7 +29,7 @@ FrameWidgetClass rootFrame {
    "text valign" center
    {
     TextWidgetClass distance {
-     visible 1
+     visible 0
      clipchildren 0
      ignorepointer 1
      color 0.8118 0.8471 0.8627 1

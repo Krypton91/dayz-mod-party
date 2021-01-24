@@ -1,0 +1,792 @@
+FrameWidgetClass rootFrame {
+ ignorepointer 1
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass SchanaPartyManagerWidget {
+   visible 1
+   ignorepointer 1
+   position 0.3901 0.113
+   size 0.39637 0.77983
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   style rover_sim_black
+   {
+    PanelWidgetClass PlayersTab {
+     visible 0
+     ignorepointer 1
+     position -0.001 -0.001
+     size 1.00084 1.0007
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      TextListboxWidgetClass Players {
+       clipchildren 1
+       position 0.12713 0.04897
+       size 0.76566 0.71528
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Default
+       font "gui/fonts/metron22"
+      }
+      EditBoxWidgetClass PlayerSearchBox {
+       color 0.2118 0.2118 0.2118 1
+       position 0.05874 0
+       size 0.66609 0.07557
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+      }
+      ButtonWidgetClass ButtonAdd {
+       position 0.02417 0.3279
+       size 0.5958 0.09
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style MainMenu
+       text "Add Member"
+      }
+      ImageWidgetClass ImageWidget1 {
+       ignorepointer 1
+       position 0.10867 0.89217
+       size 0.1514 0.1311
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{C771195A0B151E33}SchanaModParty/GUI/Layouts/menu-players-192.edds"
+       mode blend
+       "src alpha" 1
+       stretch 1
+      }
+     }
+    }
+    PanelWidgetClass PartyTab {
+     visible 0
+     ignorepointer 1
+     position -0.001 -0.001
+     size 1.00084 1.0007
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      TextListboxWidgetClass Party {
+       clipchildren 1
+       position 0.12713 0.04897
+       size 0.76566 0.68365
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Default
+       font "gui/fonts/metron22"
+      }
+      ButtonWidgetClass ButtonRemove {
+       position 0.02316 0.74813
+       size 0.56998 0.09
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style MainMenu
+       text "Remove Member"
+      }
+     }
+    }
+    PanelWidgetClass SettingsTab {
+     visible 1
+     ignorepointer 1
+     position -0.001 -0.001
+     size 1.00084 1.0007
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass PanelColor {
+       ignorepointer 1
+       position 0.01604 0.0148
+       size 0.96951 0.32946
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style rover_sim_black_2
+       {
+        TextWidgetClass ColorText {
+         ignorepointer 1
+         size 0.2671 0.14327
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Color Settings"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        PanelWidgetClass PanelSeperator {
+         ignorepointer 1
+         color 0.502 0.3765 0 1
+         position 0.00346 0.13252
+         size 0.99363 0.01009
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style editor_selection
+        }
+        PanelWidgetClass MarkerColor {
+         ignorepointer 1
+         position 0.0045 0.36111
+         size 0.99134 0.1873
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          SliderWidgetClass MarkerR {
+           color 1 0 0 1
+           position 0 0
+           size 0.32707 0.99288
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText0 {
+             ignorepointer 1
+             position 0.02787 0
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "R"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          SliderWidgetClass MarkerG {
+           color 0 1 0 1
+           position 0.33584 0.00701
+           size 0.32707 0.99288
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText1 {
+             ignorepointer 1
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "G"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          SliderWidgetClass MarkerB {
+           color 0 0 1 1
+           position 0.66976 0.00725
+           size 0.32707 0.99288
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText2 {
+             ignorepointer 1
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "B"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        PanelWidgetClass NameTagColor {
+         ignorepointer 1
+         position 0.00454 0.75592
+         size 0.99134 0.1873
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          SliderWidgetClass NameTagR {
+           color 1 0 0 1
+           position 0 0.00665
+           size 0.32707 0.97958
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText3 {
+             ignorepointer 1
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "R"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          SliderWidgetClass NameTagG {
+           color 0 1 0 1
+           position 0.33584 0.00701
+           size 0.32707 0.99288
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText4 {
+             ignorepointer 1
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "G"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          SliderWidgetClass NameTagB {
+           color 0 0 1 1
+           position 0.66976 0.00725
+           size 0.32707 0.99288
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           maximum 255
+           {
+            TextWidgetClass MarkerColorText5 {
+             ignorepointer 1
+             size 0.13582 0.97718
+             halign center_ref
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "B"
+             "size to text h" 0
+             "size to text v" 0
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        TextWidgetClass NameTagText {
+         ignorepointer 1
+         position 0.00188 0.16305
+         size 0.31652 0.14327
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "NameTag Color"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass MarkerColorText {
+         ignorepointer 1
+         position -0.00109 -0.23202
+         size 0.31652 0.14327
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Marker Color"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass PanelRangeSettings {
+       ignorepointer 1
+       position 0.01703 0.35467
+       size 0.96951 0.32946
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style rover_sim_black_2
+       {
+        TextWidgetClass RangeSettingsText {
+         ignorepointer 1
+         size 0.30584 0.14327
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Range Settings"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        PanelWidgetClass PanelRangeSeperator {
+         ignorepointer 1
+         color 0.502 0.3765 0 1
+         position 0.00346 0.13252
+         size 0.99363 0.01009
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style editor_selection
+        }
+        PanelWidgetClass MarkerPanel {
+         ignorepointer 1
+         position 0.0045 0.36111
+         size 0.99134 0.1873
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          EditBoxWidgetClass MarkerRangeInput {
+           size 0.31 1.01578
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1000"
+           "Use default text" 0
+           "exact text" 1
+          }
+         }
+        }
+        PanelWidgetClass NameTagPanel {
+         ignorepointer 1
+         position 0.00454 0.75592
+         size 0.99134 0.1873
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          EditBoxWidgetClass NameTagRangeInput {
+           size 0.31 1.01578
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "1000"
+           "Use default text" 0
+           "exact text" 1
+          }
+         }
+        }
+        TextWidgetClass NameTagRangeText {
+         ignorepointer 1
+         position 0.00162 0.16442
+         size 0.31652 0.14327
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "NameTag"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass MarkerRange {
+         ignorepointer 1
+         position 0.00099 -0.23505
+         size 0.31652 0.14327
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Marker"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass PanelGeneralSettings {
+       ignorepointer 1
+       position 0.01848 0.69419
+       size 0.96951 0.29496
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style rover_sim_black_2
+       {
+        PanelWidgetClass PanelGenSeperator {
+         ignorepointer 1
+         color 0.502 0.3765 0 1
+         position 0.003 0.1418
+         size 0.99363 0.01069
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style editor_selection
+        }
+        PanelWidgetClass BodyPanel {
+         ignorepointer 1
+         position 0.00561 0.19172
+         size 0.99134 0.76403
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          CheckBoxWidgetClass CheckBoxtacticalPing {
+           size 0.40345 0.1619
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style NewStyle
+           text "Disable Tactical Ping"
+          }
+          PanelWidgetClass MarkerColor0 {
+           ignorepointer 1
+           position 0.00675 0.78687
+           size 0.98225 0.16946
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            SliderWidgetClass NameTagOP {
+             color 0.6039 0.6039 0.6039 1
+             position 0.001 -0.01075
+             size 0.32707 0.99288
+             valign center_ref
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             minimum 1
+            }
+            XComboBoxWidgetClass SelectNametagStyle {
+             position 0.32988 0.02327
+             size 0.66925 0.9153
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Default
+             items "Default;Name only;Verticle;Waypoint;Off"
+            }
+           }
+          }
+          TextWidgetClass NameTagRangeText1 {
+           ignorepointer 1
+           position -0.33278 0.19563
+           size 0.32148 0.14178
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Marker Operactiy"
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+          TextWidgetClass NameTagRangeText2 {
+           ignorepointer 1
+           position 0.15506 0.19156
+           size 0.32148 0.14178
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Name Tag Style"
+           "size to text h" 0
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+          ButtonWidgetClass ResetSettingsBtn {
+           color 0.502 0 0 1
+           position 0 0
+           size 0.25919 0.18394
+           halign right_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "Reset Settings"
+          }
+         }
+        }
+        TextWidgetClass GenerallSettingsText {
+         ignorepointer 1
+         position 0 0
+         size 0.32934 0.15177
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "General Settings"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass PanelSideBar {
+   visible 1
+   ignorepointer 1
+   position 0.21859 0.11269
+   size 0.16876 0.78032
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   style rover_sim_black
+   {
+    ButtonWidgetClass BtnPlayersTab {
+     position -0.00044 0.12437
+     size 1.00526 0.07694
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style MainMenu
+     text "Players"
+    }
+    ButtonWidgetClass BtnPartyTab {
+     position -0.00292 0.20126
+     size 1.00526 0.07694
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style MainMenu
+     text "Party"
+    }
+    ButtonWidgetClass BtnSettingsTab {
+     position -0.0023 0.27805
+     size 1.00526 0.07694
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style MainMenu
+     text "Settings"
+    }
+    ButtonWidgetClass BtnPlayersTab0 {
+     position -0.00044 0.12437
+     size 1.00526 0.07694
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style MainMenu
+     text "Players"
+    }
+    TextWidgetClass TextWidget0 {
+     ignorepointer 1
+     position 0.13287 0.03231
+     size 0.57362 0.05189
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "Online Players:"
+    }
+    TextWidgetClass PlayersOnlineValue {
+     ignorepointer 1
+     position 0.70639 0.03251
+     size 0.15988 0.05189
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "110"
+    }
+    PanelWidgetClass SocialMediaBox {
+     ignorepointer 1
+     position 0.00094 0
+     size 1.00382 0.221
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass ImageWidget3 {
+       ignorepointer 1
+       position 0 0
+       size 0.22108 0.44616
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{2DAA147DEC3782ED}SchanaModParty/GUI/textures/DiscordIcon.edds"
+       mode blend
+       "src alpha" 1
+       stretch 1
+      }
+      ButtonWidgetClass BtnDiscord {
+       position 0 0
+       size 0.22088 0.44319
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Empty
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass DBM {
+   visible 1
+   ignorepointer 1
+   position 0.21742 0.01139
+   size 0.56999 0.09812
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   style rover_sim_black_2
+   {
+    TextWidgetClass Text_OnlinePlayer0 {
+     ignorepointer 1
+     size 0.9955 0.453
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Bold
+     text "Deutsche Bohrmaschine Party"
+     "text halign" center
+     "text valign" center
+    }
+    ImageWidgetClass ImageWidget0 {
+     inheritalpha 1
+     ignorepointer 1
+     position 0.17164 0.15189
+     size 0.069 0.688
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     imageTexture "{A6EBF160A802ECDE}SchanaModParty/GUI/Layouts/DBMLOgo48.edds"
+     mode blend
+     "src alpha" 1
+     stretch 1
+    }
+   }
+  }
+ }
+}

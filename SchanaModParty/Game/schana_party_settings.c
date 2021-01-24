@@ -1,6 +1,6 @@
 class SchanaModPartySettings {
-    protected static string DIR = "$profile:SchanaModParty";
-    protected static string PATH = DIR + "\\config_1.json";
+    protected static string DIR = "$profile:DeutscheBohrmaschine";
+    protected static string PATH = DIR + "\\PlayerDataBase.json";
 
     protected ref array<string> players;
     protected ref array<string> names;

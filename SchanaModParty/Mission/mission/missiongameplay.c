@@ -1,6 +1,6 @@
 modded class MissionGameplay extends MissionBase {
     protected ref SchanaPartyMenu m_SchanaPartyMenu;
-	
+	protected ref DBMPartySettings m_clientSettings;
 	protected int SchanaPingTimerMax = 0;
 	
 	override void OnMissionStart(){
@@ -8,6 +8,7 @@ modded class MissionGameplay extends MissionBase {
         GetRPCManager ().AddRPC ("SchanaModParty", "SchanaPartyModSettingsRPC", this, SingleplayerExecutionType.Both);
 		SchanaPartyUtils.LogMessage ("Requesting settings from server");
 		GetRPCManager ().SendRPC ("SchanaModParty", "SchanaPartyModSettingsRPC", new Param1< SchanaModPartyServerSettings >( NULL ), true, NULL);
+        m_clientSettings = GetDBMPartySettings();
 	}
 	
 	
@@ -72,6 +73,8 @@ modded class MissionGameplay extends MissionBase {
             }
 
             if (input.LocalPress ("UASchanaPartyPing", false) && NowTime > SchanaPingTimerMax && GetGame ().GetUIManager ().GetMenu () == NULL) {
+                if(m_clientSettings.IsTacticalPingDisabled())
+                    return;
 				SchanaPingTimerMax = NowTime + 700;
                 vector position = SchanaPartyGetRaycastPosition ();
                 if (position != vector.Zero) {
@@ -82,6 +85,8 @@ modded class MissionGameplay extends MissionBase {
             }
 
             if (input.LocalPress ("UASchanaPartyPingClear", false) && NowTime > SchanaPingTimerMax && GetGame ().GetUIManager ().GetMenu () == NULL) {
+                if(m_clientSettings.IsTacticalPingDisabled())
+                    return;
 				SchanaPingTimerMax = NowTime + 1200;
                 GetSchanaPartyMarkerManagerClient ().Reset ();
             }

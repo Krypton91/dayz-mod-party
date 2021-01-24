@@ -12,9 +12,9 @@ class CfgMods
 {
 	class SchanaModParty
 	{
-		name = "SchanaModParty";
-		action = "https://github.com/schana/dayz-mod-party";
-		author = "schana";
+		name = "DBM Party";
+		action = "https://deutschebohrmaschine.de";
+		author = "Krypton91";
 		type = "mod";
 		inputs = "SchanaModParty/Data/Inputs.xml";
 		dependencies[] =

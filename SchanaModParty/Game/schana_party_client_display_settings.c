@@ -1,5 +1,5 @@
 class SchanaModPartyClientDisplaySettings {
-    protected static string DIR = "$profile:SchanaModParty";
+    protected static string DIR = "$profile:DeutscheBohrmaschine";
     protected static string PATH = DIR + "\\display_settings.json";
 
     protected bool enable_party = true;

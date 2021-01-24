@@ -321,7 +321,7 @@ class SchanaPartyManagerServer {
 	}
 
 	protected void SendPartyInfoToPlayer (string id, ref set<string> party_ids, int maxPartySize, ref map<string, vector> positions, ref map<string, float> server_healths, PlayerIdentity player) {
-			SchanaPartyUtils.Trace ("SendPartyInfoToPlayer Start");
+		SchanaPartyUtils.Trace ("SendPartyInfoToPlayer Start");
 		auto ids = new ref array<string>;
 		auto locations = new ref array<vector>;
 		auto healths = new ref array<float>;
