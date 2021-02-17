@@ -208,7 +208,7 @@ class SchanaPartyMenu extends UIScriptedMenu {
 				m_SchanaPartyPlayerList.GetItemData (selectedRow, 0, id);
 				SchanaPartyUtils.LogMessage ("Menu add " + id.param1);
 				auto data = new Param1<string> (id.param1);
-        		GetRPCManager ().SendRPC ("SchanaModParty", "MessageAddPlayer", data);
+        		//GetRPCManager ().SendRPC ("SchanaModParty", "MessageAddPlayer", data);
 				GetSchanaPartyManagerClient ().AddPlayerToParty (id.param1);
 				SchanaPartyUpdateLists ();
 				break;
